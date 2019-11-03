@@ -2,6 +2,8 @@ require 'pry'
 class Dog
   
   @@all = []
+  
+  attr_accessor :name
     
   def initialize(name)
     @name = name
@@ -18,7 +20,7 @@ class Dog
   
   def self.print_all
     @@all.each do |n|
-    if n
+    puts "#{n}"
     end
   end
   
