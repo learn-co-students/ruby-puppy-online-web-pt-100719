@@ -1,4 +1,4 @@
-# Add your code here
+require 'pry'
 class Dog 
   
   @@all = []
@@ -11,12 +11,17 @@ class Dog
     @@all << self 
   end 
   
-  def self.all()
+  def self.all      #array returns all dogs
     @@all
   end 
   
-  def self.clear_all
+  def self.clear_all     # empties out array
   @@all.clear 
   end 
   
+  def self.print_all
+    @@all.collect {|dogs| puts dogs.name.to_s }
+  end 
+  
 end 
+fido = Dog.new("Fido")
