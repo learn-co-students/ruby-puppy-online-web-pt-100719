@@ -8,7 +8,7 @@ class Dog
   
   def initialize(name)
     @name = name
-    @@all << self 
+   # @@all << self 
   end 
   
   def self.all      #array returns all dogs
@@ -22,6 +22,10 @@ class Dog
   def self.print_all
     @@all.collect {|dogs| puts dogs.name.to_s }
   end 
+  
+  def save
+    @@all << self
+  end
   
 end 
 fido = Dog.new("Fido")
